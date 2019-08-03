@@ -29,7 +29,7 @@ func ${1:name}(w http.ResponseWriter, r *http.Request) {
 ##### define your own Snippets:
 ```
 # cd into the built-in snippets folder
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Go/Snippets
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Go/Snippets/
 ls
 //go-defun.sublime-snippet go-fori.sublime-snippet
 vim go-handle.sublime-snippet
