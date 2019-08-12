@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+func ${1:name}(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+    ${2:}
+}
+]]></content>
+    <tabTrigger>handler</tabTrigger>
+    <scope>source.go</scope>
+</snippet>

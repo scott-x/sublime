@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+type conf struct {
+   //注意想要拿到字段，字段和tag strings.EqualFold 之后至少有一个需和json里面的字段名一致
+}
+
+func getConf() *conf{
+    f, err := os.Open(${0:json})
+    if err != nil {
+        fmt.Printf("Open configuration error: %s\n", err)
+        return
+    }
+    defer f.Close()
+    configuration := &conf{}
+    decoder := json.NewDecoder(f)
+    err = decoder.Decode(configuration)
+    if err != nil {
+        panic(err)
+    }
+    return configuration
+}
+]]></content>
+    <tabTrigger>get_json_configration</tabTrigger>
+    <scope>source.go</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[var data map[string]string
+body, _ := ioutil.ReadAll(r.Body)
+json.Unmarshal(body, &data)
+//fmt.Println(data)
+keywords, content := data["keywords"], data["content"]]]></content>
+	<tabTrigger>parsebody</tabTrigger>
+	<scope>source.go</scope>
+	<description>parse post data from client</description>
+</snippet>
